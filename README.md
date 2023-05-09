@@ -47,6 +47,13 @@ The required IAM permissions to create resources from this module can be found [
   6. Once Prometheus and Grafana are deployed, the exporter can be configured to scrape metrics data from your application or system and send it to Prometheus.
   7. Finally, you can use Grafana to create custom dashboards and visualize the metrics data collected by Prometheus.
   8. This module is compatible with EKS version 1.23, which is great news for users deploying the module on an EKS cluster running that version. Review the module's documentation, meet specific configuration requirements, and test thoroughly after deployment to ensure everything works as expected.
+
+  ## Supported Versions Table:
+
+|  MongoDB Helm Chart Version    |     K8s supported version   |      
+| :-----:                       |         :---                | 
+| **13.1.5**                     |    1.23,1.24,1.25           |
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
