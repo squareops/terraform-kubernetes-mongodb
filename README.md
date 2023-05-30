@@ -19,7 +19,7 @@ This module is for deploying a highly available MongoDB cluster on Kubernetes us
 
 ```hcl
 module "mongodb" {
-  source                   = "https://github.com/sq-ia/terraform-kubernetes-mongodb.git"
+  source                   = "squareops/mongodb/kubernetes"
   cluster_name             = "dev-skaf"
   mongodb_config = {
   name               = "skaf"
@@ -51,10 +51,10 @@ module "mongodb" {
 
 
 ```
-Refer [examples](https://github.com/sq-ia/terraform-kubernetes-mongodb/tree/main/examples/complete) for more details.
+Refer [examples](https://github.com/RohitSquareops/terraform-kubernetes-mongodb/tree/main/examples/complete) for more details.
 
 ## IAM Permissions
-The required IAM permissions to create resources from this module can be found [here](https://github.com/sq-ia/terraform-kubernetes-mongodb/blob/main/IAM.md)
+The required IAM permissions to create resources from this module can be found [here](https://github.com/RohitSquareops/terraform-kubernetes-mongodb/blob/main/IAM.md)
 
 ## Important Notes
   1. In order to enable the exporter, it is required to deploy Prometheus/Grafana first.
@@ -130,7 +130,7 @@ No modules.
 
 To report an issue with a project:
 
-  1. Check the repository's [issue tracker](https://github.com/sq-ia/terraform-kubernetes-mongodb/issues) on GitHub
+  1. Check the repository's [issue tracker](https://github.com/RohitSquareops/terraform-kubernetes-mongodb/issues) on GitHub
   2. Search to see if the issue has already been reported
   3. If you can't find an answer to your question in the documentation or issue tracker, you can ask a question by creating a new issue. Be sure to provide enough context and details so others can understand your problem.
 
@@ -142,7 +142,7 @@ Apache License, Version 2.0, January 2004 (http://www.apache.org/licenses/).
 
 To support a GitHub project by liking it, you can follow these steps:
 
-  1. Visit the repository: Navigate to the [GitHub repository](https://github.com/sq-ia/terraform-kubernetes-mongodb).
+  1. Visit the repository: Navigate to the [GitHub repository](https://github.com/RohitSquareops/terraform-kubernetes-mongodb).
 
   2. Click the "Star" button: On the repository page, you'll see a "Star" button in the upper right corner. Clicking on it will star the repository, indicating your support for the project.
 

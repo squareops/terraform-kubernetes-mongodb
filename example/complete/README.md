@@ -21,7 +21,7 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_mongodb"></a> [mongodb](#module\_mongodb) | https://github.com/sq-ia/terraform-kubernetes-mongodb.git | n/a |
+| <a name="module_mongodb"></a> [mongodb](#module\_mongodb) | squareops/mongodb/kubernetes | n/a |
 
 ## Resources
 
