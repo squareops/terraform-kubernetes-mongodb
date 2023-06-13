@@ -44,6 +44,9 @@ resource "kubernetes_namespace" "mongodb" {
   metadata {
     annotations = {}
     name        = var.namespace
+    labels = {
+      "pod-security.kubernetes.io/warn" = "restricted"
+    }
   }
 }
 
