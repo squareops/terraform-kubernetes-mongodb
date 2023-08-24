@@ -6,7 +6,7 @@
 
 ### [SquareOps Technologies](https://squareops.com/) Your DevOps Partner for Accelerating cloud journey.
 <br>
-This module is for deploying a highly available MongoDB cluster on Kubernetes using Helm charts. This module provides flexible configuration options to customize the MongoDB deployment such as setting the volume size, architecture, replica count, and more. It also includes options to enable MongoDB backups and restores, and to deploy MongoDB exporters for getting metrics in Grafana. Additionally, this module provides options to create a new namespace, and to configure recovery windows for AWS Secrets Manager, Azure key vault & GCP secrets manager. With this module, users can easily deploy a highly available MongoDB cluster on AWS EKS, AZure AKS & GCP GKE Kubernetes clusters with the flexibility to customize their configurations according to their needs.
+This module is for deploying a highly available MongoDB cluster on Kubernetes using Helm charts. This module provides flexible configuration options to customize the MongoDB deployment such as setting the volume size, architecture, replica count, and more. It also includes options to enable MongoDB backups and restores, and to deploy MongoDB exporters for getting metrics in Grafana. Additionally, this module provides options to create a new namespace, and to configure recovery windows for AWS Secrets Manager, Azure key vault & GCP secrets manager. With this module, users can easily deploy a highly available MongoDB cluster on AWS EKS, Azure AKS & GCP GKE Kubernetes clusters with the flexibility to customize their configurations according to their needs.
 
 ## Supported Versions:
 
