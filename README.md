@@ -19,7 +19,7 @@ This module is for deploying a highly available MongoDB cluster on Kubernetes us
 
 ```hcl
 module "aws" {
-  source                             = "squareops/mongodb/kubernetes//provider/aws"
+  source                             = "squareops/mongodb/kubernetes//modules/resources/aws"
   environment                        = "prod"
   name                               = "mongodb"
   store_password_to_secret_manager   = "true"

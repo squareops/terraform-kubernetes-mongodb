@@ -21,7 +21,7 @@ locals {
 }
 
 module "azure" {
-  source                             = "squareops/mongodb/kubernetes//provider/azure"
+  source                             = "squareops/mongodb/kubernetes//modules/resources/azure"
   resource_group_name                = ""
   resource_group_location            = ""
   name                               = local.name
