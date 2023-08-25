@@ -17,7 +17,7 @@ locals {
   }
 }
 module "aws" {
-  source                             = "squareops/mongodb/kubernetes//provider/aws"
+  source                             = "squareops/mongodb/kubernetes//modules/resources/aws"
   environment                        = local.environment
   name                               = local.name
   store_password_to_secret_manager   = local.store_password_to_secret_manager
