@@ -19,6 +19,9 @@ resource "kubernetes_namespace" "mongodb" {
   metadata {
     annotations = {}
     name        = var.namespace
+    labels = {
+      istio-injection = "enabled"
+    }
   }
 }
 
