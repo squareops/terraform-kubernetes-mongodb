@@ -22,7 +22,7 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_gcp"></a> [gcp](#module\_gcp) | squareops/mongodb/kubernetes//provider/gcp | n/a |
+| <a name="module_gcp"></a> [gcp](#module\_gcp) | squareops/mongodb/kubernetes//modules/resources/gcp | n/a |
 | <a name="module_mongodb"></a> [mongodb](#module\_mongodb) | squareops/mongodb/kubernetes | n/a |
 
 ## Resources
