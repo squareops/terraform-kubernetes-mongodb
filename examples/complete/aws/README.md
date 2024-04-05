@@ -21,8 +21,8 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_aws"></a> [aws](#module\_aws) | squareops/mongodb/kubernetes//modules/resources/aws | n/a |
-| <a name="module_mongodb"></a> [mongodb](#module\_mongodb) | squareops/mongodb/kubernetes | n/a |
+| <a name="module_aws"></a> [aws](#module\_aws) | ../../../modules/resources/aws | n/a |
+| <a name="module_mongodb"></a> [mongodb](#module\_mongodb) | ../../../ | n/a |
 
 ## Resources
 

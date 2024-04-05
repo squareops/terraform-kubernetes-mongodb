@@ -1,7 +1,7 @@
 locals {
   name        = "mongo"
-  region      = "us-east-2"
-  environment = "prod"
+  region      = "ap-northeast-1"
+  environment = "stg"
   additional_tags = {
     Owner      = "organization_name"
     Expires    = "Never"
@@ -19,18 +19,19 @@ locals {
   }
 }
 module "aws" {
-  source                             = "squareops/mongodb/kubernetes//modules/resources/aws"
+  # source                             = "squareops/mongodb/kubernetes//modules/resources/aws"
+  source                             = "../../../modules/resources/aws"
   environment                        = local.environment
   name                               = local.name
   namespace                          = local.namespace
   store_password_to_secret_manager   = local.store_password_to_secret_manager
-  cluster_name                       = ""
+  cluster_name                       = "stg-rachit"
   mongodb_custom_credentials_enabled = local.mongodb_custom_credentials_enabled
   mongodb_custom_credentials_config  = local.mongodb_custom_credentials_config
 }
 
 module "mongodb" {
-  source           = "squareops/mongodb/kubernetes"
+  source           = "../../../"
   namespace        = local.namespace
   create_namespace = local.create_namespace
   mongodb_config = {

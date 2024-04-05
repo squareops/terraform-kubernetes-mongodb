@@ -12,7 +12,7 @@ This module is for deploying a highly available MongoDB cluster on Kubernetes us
 
 |  MongoDB Helm Chart Version    |     K8s supported version (EKS, AKS & GKE)  |  
 | :-----:                       |         :---                |
-| **13.1.5**                     |    **1.23,1.24,1.25,1.26,1.27**           |
+| **15.1.2**                     |    **1.23,1.24,1.25,1.26,1.27,**           |
 
 
 ## Usage Example
@@ -115,7 +115,7 @@ Features
 - s3_bucket_region: The region of the S3 bucket.
 - cron_for_full_backup: The cron expression for scheduling full backups.
 ### Restore Configuration
-- mongodb_restore_config: Configuration for restoring databases. 
+- mongodb_restore_config: Configuration for restoring databases.
 - bucket_uri: The URI of the S3 bucket containing the backup file.
 - file_name: The name of the backup file to restore.
 - s3_bucket_region: The region of the S3 bucket containing the backup file.
@@ -161,16 +161,16 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_app_version"></a> [app\_version](#input\_app\_version) | Version of the Mongodb application that will be deployed. | `string` | `"5.0.8-debian-10-r9"` | no |
+| <a name="input_app_version"></a> [app\_version](#input\_app\_version) | Version of the Mongodb application that will be deployed. | `string` | `"7.0.8-debian-12-r0"` | no |
 | <a name="input_az_account_backup"></a> [az\_account\_backup](#input\_az\_account\_backup) | Azure user managed account backup identity | `string` | `""` | no |
 | <a name="input_az_account_restore"></a> [az\_account\_restore](#input\_az\_account\_restore) | Azure user managed account restore identity | `string` | `""` | no |
 | <a name="input_azure_container_name"></a> [azure\_container\_name](#input\_azure\_container\_name) | Azure container name | `string` | `""` | no |
 | <a name="input_azure_storage_account_key"></a> [azure\_storage\_account\_key](#input\_azure\_storage\_account\_key) | Azure storage account key | `string` | `""` | no |
 | <a name="input_azure_storage_account_name"></a> [azure\_storage\_account\_name](#input\_azure\_storage\_account\_name) | Azure storage account name | `string` | `""` | no |
 | <a name="input_bucket_provider_type"></a> [bucket\_provider\_type](#input\_bucket\_provider\_type) | Choose what type of provider you want (s3, gcs) | `string` | `"gcs"` | no |
-| <a name="input_chart_version"></a> [chart\_version](#input\_chart\_version) | Version of the Mongodb chart that will be used to deploy Mongodb application. | `string` | `"13.1.5"` | no |
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Specifies the name of the EKS cluster to deploy the Mongodb application on. | `string` | `""` | no |
 | <a name="input_create_namespace"></a> [create\_namespace](#input\_create\_namespace) | Specify whether or not to create the namespace if it does not already exist. Set it to true to create the namespace. | `string` | `false` | no |
+| <a name="input_helm_chart_version"></a> [helm\_chart\_version](#input\_helm\_chart\_version) | Version of the Mongodb chart that will be used to deploy Mongodb application. | `string` | `"15.1.2"` | no |
 | <a name="input_iam_role_arn_backup"></a> [iam\_role\_arn\_backup](#input\_iam\_role\_arn\_backup) | IAM role ARN for backup (AWS) | `string` | `""` | no |
 | <a name="input_iam_role_arn_restore"></a> [iam\_role\_arn\_restore](#input\_iam\_role\_arn\_restore) | IAM role ARN for restore (AWS) | `string` | `""` | no |
 | <a name="input_metric_exporter_password"></a> [metric\_exporter\_password](#input\_metric\_exporter\_password) | Metric exporter password for MongoDB | `string` | `""` | no |
@@ -179,7 +179,7 @@ No modules.
 | <a name="input_mongodb_config"></a> [mongodb\_config](#input\_mongodb\_config) | Specify the configuration settings for Mongodb, including the name, environment, storage options, replication settings, and custom YAML values. | `any` | <pre>{<br>  "architecture": "",<br>  "custom_databases": "",<br>  "custom_databases_passwords": "",<br>  "custom_databases_usernames": "",<br>  "environment": "",<br>  "name": "",<br>  "replica_count": 2,<br>  "storage_class_name": "",<br>  "store_password_to_secret_manager": true,<br>  "values_yaml": "",<br>  "volume_size": ""<br>}</pre> | no |
 | <a name="input_mongodb_custom_credentials_config"></a> [mongodb\_custom\_credentials\_config](#input\_mongodb\_custom\_credentials\_config) | Specify the configuration settings for Mongodb to pass custom credentials during creation. | `any` | <pre>{<br>  "metric_exporter_password": "",<br>  "metric_exporter_user": "",<br>  "root_password": "",<br>  "root_user": ""<br>}</pre> | no |
 | <a name="input_mongodb_custom_credentials_enabled"></a> [mongodb\_custom\_credentials\_enabled](#input\_mongodb\_custom\_credentials\_enabled) | Specifies whether to enable custom credentials for MongoDB database. | `bool` | `false` | no |
-| <a name="input_mongodb_exporter_config"></a> [mongodb\_exporter\_config](#input\_mongodb\_exporter\_config) | Specify whether or not to deploy Mongodb exporter to collect Mongodb metrics for monitoring in Grafana. | `any` | <pre>{<br>  "version": "2.9.0"<br>}</pre> | no |
+| <a name="input_mongodb_exporter_config"></a> [mongodb\_exporter\_config](#input\_mongodb\_exporter\_config) | Specify whether or not to deploy Mongodb exporter to collect Mongodb metrics for monitoring in Grafana. | `any` | <pre>{<br>  "version": "3.5.0"<br>}</pre> | no |
 | <a name="input_mongodb_exporter_enabled"></a> [mongodb\_exporter\_enabled](#input\_mongodb\_exporter\_enabled) | Specify whether or not to deploy Mongodb exporter to collect Mongodb metrics for monitoring in Grafana. | `bool` | `false` | no |
 | <a name="input_mongodb_exporter_values"></a> [mongodb\_exporter\_values](#input\_mongodb\_exporter\_values) | Mongo DB prometheus exporter values file | `any` | `""` | no |
 | <a name="input_mongodb_restore_config"></a> [mongodb\_restore\_config](#input\_mongodb\_restore\_config) | Configuration options for restoring dump to the Mongodb database. | `any` | <pre>{<br>  "bucket_uri": "s3://mymongo/mongodumpfull_20230424_112501.gz",<br>  "file_name": "",<br>  "s3_bucket_region": "us-east-2"<br>}</pre> | no |

@@ -26,7 +26,7 @@ resource "helm_release" "mongodb" {
   depends_on = [kubernetes_namespace.mongodb]
   name       = "mongodb"
   chart      = "mongodb"
-  version    = var.chart_version
+  version    = var.helm_chart_version
   timeout    = 600
   namespace  = var.namespace
   repository = "https://charts.bitnami.com/bitnami"
