@@ -161,6 +161,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_additional_aws_tags"></a> [additional\_aws\_tags](#input\_additional\_aws\_tags) | Additional tags to be applied to resources | `map(string)` | `{}` | no |
 | <a name="input_app_version"></a> [app\_version](#input\_app\_version) | Version of the Mongodb application that will be deployed. | `string` | `"7.0.8-debian-12-r0"` | no |
 | <a name="input_az_account_backup"></a> [az\_account\_backup](#input\_az\_account\_backup) | Azure user managed account backup identity | `string` | `""` | no |
 | <a name="input_az_account_restore"></a> [az\_account\_restore](#input\_az\_account\_restore) | Azure user managed account restore identity | `string` | `""` | no |

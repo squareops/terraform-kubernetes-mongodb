@@ -2,7 +2,7 @@ locals {
   name        = "mongo"
   region      = "ap-northeast-1"
   environment = "stg"
-  additional_tags = {
+  additional_aws_tags = {
     Owner      = "organization_name"
     Expires    = "Never"
     Department = "Engineering"

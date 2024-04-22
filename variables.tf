@@ -1,3 +1,9 @@
+variable "additional_aws_tags" {
+  description = "Additional tags to be applied to resources"
+  type        = map(string)
+  default     = {}
+}
+
 variable "mongodb_config" {
   type = any
   default = {
