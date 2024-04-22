@@ -34,5 +34,5 @@ spec:
               value: {{ .Values.bucket_provider_type }}
             - name: AWS_DEFAULT_REGION
               value: {{ .Values.backup.aws_default_region }}
-            resources: 
+            resources:
               {{- toYaml .Values.backupjob.resources | nindent 14 }}
