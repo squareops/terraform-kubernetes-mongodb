@@ -319,7 +319,7 @@ tls:
   ##     memory: 1024Mi
   ##
   resources: {}
-  ## Init Container securityContext 
+  ## Init Container securityContext
   ## ref: https://kubernetes.io/docs/concepts/security/pod-security-policy/
   ## @param tls.securityContext Init container generate-tls-cert Security context
   ##
@@ -1392,7 +1392,7 @@ persistentVolumeClaimRetentionPolicy:
 #       ## @param backup.cronjob.storage.annotations PVC annotations
 #       ##
 #       annotations: {}
-#       ## @param backup.cronjob.storage.mountPath Path to mount the volume at 
+#       ## @param backup.cronjob.storage.mountPath Path to mount the volume at
 #       ##
 #       mountPath: /backup/mongodb
 #       ## @param backup.cronjob.storage.subPath Subdirectory of the volume to mount at
@@ -2569,4 +2569,3 @@ metrics:
     ##     summary: High request latency
     ##
     rules: []
-
