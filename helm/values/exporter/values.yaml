@@ -1,18 +1,24 @@
+# affinity: {}
+
 annotations: {}
 
+# ## Additional labels to add to all resources
+# customLabels: {}
+
+# dnsConfig: {}
+
+# # Extra environment variables that will be passed into the exporter pod
+# env: {}
+
 extraArgs:
-- --collect.collection
-- --collect.database
-- --collect.indexusage
-- --collect.topmetrics
-- --collect.connpoolstats
+  - --collect-all
 
 fullnameOverride: ""
 
 image:
   pullPolicy: IfNotPresent
-  repository: ssheehy/mongodb-exporter
-  tag: 0.10.0
+  repository: percona/mongodb_exporter
+  tag: "0.40.0"
 
 imagePullSecrets: []
 
@@ -38,7 +44,10 @@ nodeSelector: {}
 
 podAnnotations: {}
 #  prometheus.io/scrape: "true"
-#  prometheus.io/port: "metrics"
+#  prometheus.io/port: "9216"
+#  prometheus.io/path: /metrics
+
+# podLabels: {}
 
 port: "9216"
 
@@ -89,10 +98,11 @@ securityContext:
   runAsUser: 10000
 
 service:
-  labels:
+  labels: {}
   annotations: {}
   port: 9216
   type: ClusterIP
+  # portName: metrics
 
 serviceAccount:
   create: true
@@ -109,5 +119,13 @@ serviceMonitor:
     release: prometheus-operator
   targetLabels: {}
   metricRelabelings: []
+  # scheme: ""
+  # tlsConfig: {}
 
 tolerations: []
+
+# # Volumes that will be attached to the exporter deployment
+# volumes: []
+
+# # Volumes that will be mounted into the exporter pod
+# volumeMounts: []

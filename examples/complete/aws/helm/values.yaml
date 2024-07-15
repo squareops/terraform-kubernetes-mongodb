@@ -34,7 +34,7 @@ arbiter:
     requests:
       cpu: 100m
       memory: 250Mi
-  
+
   affinity:
     nodeAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:

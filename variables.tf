@@ -35,13 +35,13 @@ variable "mongodb_custom_credentials_config" {
 
 variable "chart_version" {
   type        = string
-  default     = "13.1.5"
+  default     = "15.6.12"
   description = "Version of the Mongodb chart that will be used to deploy Mongodb application."
 }
 
 variable "app_version" {
   type        = string
-  default     = "5.0.8-debian-10-r9"
+  default     = "7.0.12-debian-12-r0"
   description = "Version of the Mongodb application that will be deployed."
 }
 
@@ -76,7 +76,7 @@ variable "mongodb_exporter_enabled" {
 variable "mongodb_exporter_config" {
   type = any
   default = {
-    version = "2.9.0"
+    version = "3.5.0"
   }
   description = "Specify whether or not to deploy Mongodb exporter to collect Mongodb metrics for monitoring in Grafana."
 }
