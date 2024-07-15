@@ -12,7 +12,7 @@ This module is for deploying a highly available MongoDB cluster on Kubernetes us
 
 |  MongoDB Helm Chart Version    |     K8s supported version (EKS, AKS & GKE)  |  
 | :-----:                       |         :---                |
-| **13.1.5**                     |    **1.23,1.24,1.25,1.26,1.27**           |
+| **15.6.12**                     |    **1.23,1.24,1.25,1.26,1.27,1.28,1.29**           |
 
 
 ## Usage Example
